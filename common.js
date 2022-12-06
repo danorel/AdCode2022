@@ -5,7 +5,9 @@ const streamFileReading = function (filePath) {
 };
 
 const streamTasks = function (filePath, N = 2) {
-  return [...Array(N)].map(() => (callback) => callback(streamFileReading(filePath)));
+  return [...Array(N)].map(
+    () => (callback) => callback(streamFileReading(filePath))
+  );
 };
 
 module.exports = {
